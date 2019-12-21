@@ -1,0 +1,40 @@
+import React, { Component } from 'react'
+
+import './App.css';
+import Header from './components/Header';
+import Products from './components/products'
+class App extends Component {
+  state = {
+    siteTitle: 'This is a site title',
+    products: [
+      {
+        id: 10,
+        name: 'Md Tanjim Ahmmed',
+        email: 'tanjimahmmed.8@gmail.com'
+      },
+      {
+        id: 11,
+        name: 'Zahid',
+        email: 'zahid@gmail.com'
+      },
+      {
+        id: 12,
+        name: 'HM Nayem',
+        email: 'twinkel@gmail.com'
+      }
+    ]
+  }
+  render() {
+    return (
+      <div>
+        <Header/>
+        <h2>{this.state.siteTitle}</h2>
+
+        <h3>Products</h3>
+
+        <Products items={this.state.products}/>
+      </div>
+    )
+  }
+}
+export default App;
