@@ -1,0 +1,34 @@
+//App.js
+import React from 'react';
+import './App.css';
+import First from './first/First'
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <First name='Md Tanjim Ahmmed' email='tanjimahmmed.8@gmail.com' phone='01625622862' />
+        <First name='Ahmmed Tanjim' email='tanjimahmmed.81@gmail.com' phone='0196051149' />
+        <First name='Tanjim' email='tanjim@gmail.com' phone='01781235729' />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+//First.js
+import React, { Component } from 'react'
+
+class First extends Component {
+    render() {
+        return (
+            <div>
+                <h3>Name: {this.props.name}</h3>
+                <p>Email: {this.props.email}</p>
+                <p>Phone: {this.props.phone}</p>
+            </div>
+        )
+    }
+}
+export default First
