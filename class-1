@@ -1,0 +1,48 @@
+//state 
+import React, { Component } from 'react'
+
+import './App.css';
+import './components/Header'
+class App extends Component {
+  state = {
+    siteTitle: 'This is a site title',
+    products: [
+      {
+        id: 10,
+        name: 'Md Tanjim Ahmmed',
+        email: 'tanjimahmmed.8@gmail.com'
+      },
+      {
+        id: 11,
+        name: 'Zahid',
+        email: 'zahid@gmail.com'
+      },
+      {
+        id: 12,
+        name: 'HM Nayem',
+        email: 'twinkel@gmail.com'
+      }
+    ]
+  }
+  render() {
+    return (
+      <div>
+        <header/>
+        <h2>{this.state.siteTitle}</h2>
+
+        <h3>Products</h3>
+
+        {
+          this.state.products.map((product)=>(
+            <li key={product.id}>ID: {product.id}<br/>Name: {product.name}<br/>Email: {product.email}</li>
+          ))
+        }
+      </div>
+    )
+  }
+}
+export default App;
+
+
+
+
