@@ -1,0 +1,31 @@
+import React, {Component} from 'react';
+import './App.css';
+class App extends Component {
+state = {
+  name: ''
+}
+// clickHandler = (event) => {
+//   console.log(event.target);
+// }
+inputHandler = (event) => {
+  // console.log(event.target.value);
+  this.setState({
+    name: event.target.value
+  })
+}
+  render() {
+    return (
+      <div className="App">
+        <div className="container my-3">
+          <input onChange={this.inputHandler} value={this.state.name} type="text" placeholder="Enter ur name"/>
+        <button className="btn btn-primary" onClick={ (event) => console.log (event) }>
+          click Me
+        </button>
+    { this.state.name ? <p>Hello Mr. {this.state.name}</p>: '' }
+        </div>
+      </div>
+    )
+  }
+}
+
+export default App;
